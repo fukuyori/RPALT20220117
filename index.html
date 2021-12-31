@@ -62,10 +62,37 @@
         font-size: 0.8rem;
         margin: auto;
       }
-
+      table {
+        margin-left: 80px;
+      }
       td {
         width: 100px;
         text-align: center;
+      }
+      .routeList {
+        border: 2px solid #46a667;
+        overflow: hidden;
+      }
+      #route {
+        margin-left: 80px;
+        margin-right: auto;
+      }
+      #rsltlst,
+      #rsltlst li,
+      #rsltlst li dd,
+      #rsltlst li dt,
+      #rsltlst li ul,
+      #rsltlst li li {
+        display: inline-block;
+        text-align: center;
+        padding: 0px;
+        padding-right: 4px;
+        padding-left: 4px;
+      }
+
+      #rsltlst > li {
+        display: block;
+        border-bottom: 1px solid #46a667;
       }
     </style>
   </head>
@@ -154,87 +181,47 @@
             velit nec, tincidunt tortor. Nunc ipsum est, commodo ac condimentum quis, viverra eu ligula.
           </p>
 
-          <table id="Table-2" class="table">
-            <caption>
-              id=Table-2 class=table
-            </caption>
-            <thead>
-              <tr>
-                <th>OrderDate</th>
-                <th>Region</th>
-                <th>Rep</th>
-                <th>Item</th>
-                <th>Units</th>
-                <th>Unit Cost</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>9/1/14</td>
-                <td>Central</td>
-                <td>Smith</td>
-                <td>Desk</td>
-                <td>2</td>
-                <td>125.00</td>
-                <td>250.00</td>
-              </tr>
-              <tr>
-                <td>6/17/15</td>
-                <td>Central</td>
-                <td>Kivell</td>
-                <td>Desk</td>
-                <td>5</td>
-                <td>125.00</td>
-                <td>625.00</td>
-              </tr>
-              <tr>
-                <td>9/10/15</td>
-                <td>Central</td>
-                <td>Gill</td>
-                <td>Pencil</td>
-                <td>7</td>
-                <td>1.29</td>
-                <td>9.03</td>
-              </tr>
-              <tr>
-                <td>11/17/15</td>
-                <td>Central</td>
-                <td>Jardine</td>
-                <td>Binder</td>
-                <td>11</td>
-                <td>4.99</td>
-                <td>54.89</td>
-              </tr>
-              <tr>
-                <td>10/31/15</td>
-                <td>Central</td>
-                <td>Andrews</td>
-                <td>Pencil</td>
-                <td>14</td>
-                <td>1.29</td>
-                <td>18.06</td>
-              </tr>
-              <tr>
-                <td>2/26/14</td>
-                <td>Central</td>
-                <td>Gill</td>
-                <td>Pen</td>
-                <td>27</td>
-                <td>19.99</td>
-                <td>539.73</td>
-              </tr>
-              <tr>
-                <td>10/5/14</td>
-                <td>Central</td>
-                <td>Morgan</td>
-                <td>Binder</td>
-                <td>28</td>
-                <td>8.99</td>
-                <td>251.72</td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="route">
+            <ul id="rsltlst" class="routeList">
+              <li>
+                <dl>
+                  <dt>ルート1</dt>
+                  <dd>
+                    <ul>
+                      <li class="time">19:03→<span class="mark">19:38</span><span class="small">35分</span></li>
+                      <li><span class="mark">726円</span></li>
+                      <li>乗換：<span class="mark">0回</span></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>ルート2</dt>
+                  <dd>
+                    <ul>
+                      <li class="time">19:00→<span class="mark">19:38</span><span class="small">38分</span></li>
+                      <li class="fare"><span class="mark">726円</span></li>
+                      <li class="transfer">乗換：1回</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>ルート3</dt>
+                  <dd>
+                    <ul>
+                      <li class="time">18:58→<span class="mark">19:38</span><span class="small">40分</span></li>
+                      <li class="fare"><span class="mark">726円</span></li>
+                      <li class="transfer">乗換：1回</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dolor at ante eleifend dapibus. Ut non erat eget tortor
             vestibulum faucibus. Phasellus molestie nisi quis risus gravida, nec suscipit odio convallis. In mattis fringilla nulla at
