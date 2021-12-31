@@ -2,98 +2,272 @@
 <html>
   <head>
     <title>HTML sample</title>
+    <style type="text/css">
+      #Page {
+        width: min(100%, 1200px);
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 300px 1fr;
+      }
+      #PageHeader {
+        grid-row: 1 / 2;
+        grid-column: 1 /4;
+      }
+      #PageHeader h1 {
+        text-align: center;
+      }
+      #PageHeader p,
+      #SideBar p {
+        font-size: small;
+      }
+      #MainContent {
+        grid-row: 2/3;
+        grid-column: 2 / 3;
+      }
+      #SideBar {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        padding-right: 10px;
+      }
+      #SideBarComment p {
+        width: 80%;
+      }
+      h3 {
+        background-color: #ddeaff;
+      }
+      thead,
+      tfoot {
+        background-color: #3f87a6;
+        color: #fff;
+      }
+
+      tbody {
+        background-color: #e4f0f5;
+      }
+
+      caption {
+        padding: 10px;
+        caption-side: bottom;
+      }
+
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        border: 2px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        margin: auto;
+      }
+
+      td {
+        width: 100px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div id="Page-1" class="PageClass">
-      <div id="Header-1" class="HeaderClass">
-        <h1>Power Automate for desktop</h1>
-        <p>My first paragraph.</p>
-      </div>
-      <div id="Main-1" class="MainClass">
-        <div id="div1" class="div" name="TableDiv">
-          <h3>Table Area</h3>
-          <p>Table 1</p>
-          <table id="Table-1" class="TableClass" border="1">
-            <tr>
-              <th>col1</th>
-              <th>col2</th>
-              <th>col3</th>
-              <th>col4</th>
-              <th>col5</th>
-            </tr>
-            <tr>
-              <td id="Data-1" class="data">abc</td>
-              <td id="Data-2" class="data">123</td>
-              <td id="Data-3" class="data">456</td>
-              <td id="Data-4" class="data">789</td>
-              <td id="Data-5" class="data">1000</td>
-            </tr>
-            <tr>
-              <td>efg</td>
-              <td>223</td>
-              <td>556</td>
-              <td>889</td>
-              <td>1000</td>
-            </tr>
-            <tr>
-              <td>hij</td>
-              <td>323</td>
-              <td>656</td>
-              <td>989</td>
-              <td>1000</td>
-            </tr>
-          </table>
-
-          <p>Table 2</p>
-          <table id="Table-2" class="TableClass" border="1">
-            <tr>
-              <th>col1</th>
-              <th>col2</th>
-              <th>col3</th>
-              <th>col4</th>
-              <th>col5</th>
-            </tr>
-            <tr>
-              <td>xx1</td>
-              <td>13</td>
-              <td>46</td>
-              <td>79</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td>xx2</td>
-              <td>23</td>
-              <td>56</td>
-              <td>89</td>
-              <td>100</td>
-            </tr>
-            <tr>
-              <td>xx3</td>
-              <td>33</td>
-              <td>66</td>
-              <td>99</td>
-              <td>100</td>
-            </tr>
-          </table>
+    <div id="root">
+      <div id="Page" class="PageClass">
+        <div id="PageHeader" class="header">
+          <h1>id=PageHeader class=header</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, sapien non placerat vehicula, nisi est convallis dolor,
+            in imperdiet turpis eros fringilla eros. Quisque posuere lorem augue, sit amet pharetra orci luctus ac. Donec tempus lorem ac
+            nunc euismod, eget accumsan nulla mollis. Vestibulum et placerat arcu. Etiam viverra ultrices felis, in vehicula mauris
+            ullamcorper vitae. Aenean commodo ligula et diam pretium pharetra. Nullam a sem ornare, feugiat libero quis, porta erat. Duis
+            faucibus felis eget massa congue ullamcorper. Nunc mollis ante sit amet justo pulvinar laoreet. Aenean consequat dictum justo at
+            scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In hac habitasse platea
+            dictumst. Donec quis diam et ante euismod rutrum ut viverra nisi. Nunc ultrices, orci vitae malesuada pharetra, quam sem
+            malesuada purus, sed pretium augue velit molestie eros. Aliquam non odio ac leo elementum scelerisque sit amet eu magna.
+            Phasellus pulvinar metus quis vestibulum feugiat.
+          </p>
         </div>
 
-        <div id="div2" claoss="div" name="ListDiv">
-          <h3>List Area</h3>
-          <p>List 1</p>
-          <ol id="List-1" class="ListClass">
-            <li id="ListItem1" class="ListItemClass"><a href="http://www.google.com/">google</a><span>Link 1</span></li>
-            <li id="ListItem2" class="ListItemClass"><a href="http://www.yahoo.co.jp/">yahoo</a><span>Link 2</span></li>
-            <li id="ListItem3" class="ListItemClass"><a href="https://www.bing.com/">bing</a><span>Link 3</span></li>
-            <li>item4</li>
-          </ol>
+        <div id="MainContent" class="main">
+          <h3>id=MainContent class=main</h3>
+          <p>
+            Donec nec iaculis velit, eu volutpat orci. Integer nec justo non ante convallis ultrices vehicula eu ipsum. Phasellus lacinia
+            nibh dolor, vel fermentum arcu bibendum eu. Morbi auctor in lectus vel gravida. Donec pharetra justo mauris, ut tempus quam
+            vehicula malesuada. Vestibulum viverra nibh tellus, eget semper dui ullamcorper vel. Fusce varius nulla eget libero consequat,
+            ut placerat nunc vulputate. Vivamus sed libero est. Suspendisse enim est, gravida at purus ut, rutrum vulputate nulla. Praesent
+            at interdum nulla, quis lobortis tellus.
+          </p>
+          <table id="Table-1" class="table">
+            <caption>
+              id=Table-1 class=table
+            </caption>
+            <thead>
+              <tr>
+                <th>city</th>
+                <th>state_name</th>
+                <th>population</th>
+                <th>density</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>New York</th>
+                <td>New York</td>
+                <td>18713220</td>
+                <td>10715</td>
+              </tr>
+              <tr>
+                <th>Los Angeles</th>
+                <td>California</td>
+                <td>12750807</td>
+                <td>3276</td>
+              </tr>
+              <tr>
+                <th>Chicago</th>
+                <td>Illinois</td>
+                <td>8604203</td>
+                <td>4574</td>
+              </tr>
+              <tr>
+                <th>Miami</th>
+                <td>Florida</td>
+                <td>6445545</td>
+                <td>5019</td>
+              </tr>
+              <tr>
+                <th>Dallas</th>
+                <td>Texas</td>
+                <td>5743938</td>
+                <td>1526</td>
+              </tr>
+              <tr>
+                <th>Philadelphia</th>
+                <td>Pennsylvania</td>
+                <td>5649300</td>
+                <td>4554</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Fusce interdum enim in sem imperdiet euismod. Aenean interdum sodales neque consequat gravida. Pellentesque lobortis ornare
+            nisl, a pellentesque orci elementum ut. Praesent at lobortis quam. Duis nibh lorem, luctus ut nunc ac, vulputate tristique orci.
+            Nullam vulputate enim risus. Suspendisse a orci ut ante rutrum fringilla quis dictum purus. Duis sed est scelerisque, porta
+            velit nec, tincidunt tortor. Nunc ipsum est, commodo ac condimentum quis, viverra eu ligula.
+          </p>
 
-          <p>List 2</p>
-          <ol id="List-2" class="ListClass">
-            <li>item11</li>
-            <li>item12</li>
-            <li>item13</li>
-            <li>item14</li>
-          </ol>
+          <table id="Table-2" class="table">
+            <caption>
+              id=Table-2 class=table
+            </caption>
+            <thead>
+              <tr>
+                <th>OrderDate</th>
+                <th>Region</th>
+                <th>Rep</th>
+                <th>Item</th>
+                <th>Units</th>
+                <th>Unit Cost</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9/1/14</td>
+                <td>Central</td>
+                <td>Smith</td>
+                <td>Desk</td>
+                <td>2</td>
+                <td>125.00</td>
+                <td>250.00</td>
+              </tr>
+              <tr>
+                <td>6/17/15</td>
+                <td>Central</td>
+                <td>Kivell</td>
+                <td>Desk</td>
+                <td>5</td>
+                <td>125.00</td>
+                <td>625.00</td>
+              </tr>
+              <tr>
+                <td>9/10/15</td>
+                <td>Central</td>
+                <td>Gill</td>
+                <td>Pencil</td>
+                <td>7</td>
+                <td>1.29</td>
+                <td>9.03</td>
+              </tr>
+              <tr>
+                <td>11/17/15</td>
+                <td>Central</td>
+                <td>Jardine</td>
+                <td>Binder</td>
+                <td>11</td>
+                <td>4.99</td>
+                <td>54.89</td>
+              </tr>
+              <tr>
+                <td>10/31/15</td>
+                <td>Central</td>
+                <td>Andrews</td>
+                <td>Pencil</td>
+                <td>14</td>
+                <td>1.29</td>
+                <td>18.06</td>
+              </tr>
+              <tr>
+                <td>2/26/14</td>
+                <td>Central</td>
+                <td>Gill</td>
+                <td>Pen</td>
+                <td>27</td>
+                <td>19.99</td>
+                <td>539.73</td>
+              </tr>
+              <tr>
+                <td>10/5/14</td>
+                <td>Central</td>
+                <td>Morgan</td>
+                <td>Binder</td>
+                <td>28</td>
+                <td>8.99</td>
+                <td>251.72</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dolor at ante eleifend dapibus. Ut non erat eget tortor
+            vestibulum faucibus. Phasellus molestie nisi quis risus gravida, nec suscipit odio convallis. In mattis fringilla nulla at
+            vulputate. Nullam id sodales quam, id luctus metus. Cras mauris tortor, varius sed scelerisque gravida, ultrices eget arcu.
+            Aenean purus massa, efficitur nec hendrerit in, commodo vulputate enim. Quisque lobortis dolor est, vel dictum mauris convallis
+            quis. Aliquam vitae ante nulla.
+          </p>
+        </div>
+
+        <div id="SideBar" claoss="sidebar">
+          <div id="SideBarLink" class="quicklinks" name="quicklinks">
+            <h3>id=SideBarLink</h3>
+            <p>id=List-1</p>
+            <ul id="List-1" class="list">
+              <li id="ListItem1" class="ListItemClass"><a href="http://www.google.com/">google</a></li>
+              <li id="ListItem2" class="ListItemClass"><a href="http://www.yahoo.co.jp/">yahoo</a></li>
+              <li id="ListItem3" class="ListItemClass"><a href="https://www.bing.com/">bing</a></li>
+            </ul>
+            <p>id=List-2</p>
+            <ol id="List-2" class="list">
+              <li>item11</li>
+              <li>item12</li>
+              <li>item13</li>
+              <li>item14</li>
+            </ol>
+          </div>
+          <div id="SideBarComment" class="sidebar sidebar-comment">
+            <h3>id=SideBarComment</h3>
+            <p>
+              Nam porttitor ex ut purus tincidunt mattis. Fusce ac vulputate lectus. Mauris sagittis nibh at dolor ultricies, in molestie
+              eros dignissim. Sed condimentum, est vitae auctor auctor, lectus erat accumsan leo, id faucibus eros sem nec odio. Aenean
+              tristique mi felis, eu sagittis nulla fermentum vitae. Vivamus finibus ligula et metus venenatis commodo. Nam justo erat,
+              porttitor vel mauris eget, gravida bibendum dolor. Donec vel interdum erat.
+            </p>
+          </div>
         </div>
       </div>
     </div>
