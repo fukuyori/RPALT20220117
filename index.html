@@ -85,6 +85,16 @@
         border: 2px solid #46a667;
         overflow: hidden;
       }
+      #Login table {
+        margin-left: 4px;
+      }
+      #Login input {
+        align-items: center;
+        text-align: center;
+      }
+      #Login input[type="submit"] {
+        margin-left: 35%;
+      }
       #rsltlst {
         margin-left: 80px;
         margin-right: auto;
@@ -313,6 +323,26 @@
         </div>
 
         <div id="SideBar" claoss="sidebar">
+          <div id="Login">
+            <h3>Login</h3>
+            <form name="Login" method="post" action="./">
+              <table>
+                <tr>
+                  <td>User ID</td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="uid" size="20" maxlength="32" autocomplete="OFF" /></td>
+                </tr>
+                <tr>
+                  <td>Password</td>
+                </tr>
+                <tr>
+                  <td><input type="password" name="pwd" size="20" maxlength="32" /></td>
+                </tr>
+              </table>
+              <input type="submit" value="Login" />
+            </form>
+          </div>
           <div id="SideBarLink" class="quicklinks" name="quicklinks">
             <div>
               <h3>id=SideBarLink</h3>
